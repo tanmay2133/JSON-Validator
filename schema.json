@@ -1,0 +1,31 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {"type": "integer"},
+    "name": {"type": "string"},
+    "home_phone": {"type": "string"},
+    "cell_phone": {"type": "string"},
+    "work_phone": {"type": "string"},
+    "birth_date": {"type": "string"},
+    "govt_id_number": {"type": "string"},
+    "day": {"enum": ["SU", "MO", "TU", "WE", "TH", "FR", "SA"]}
+  },
+  "required": ["id", "name"],
+  "anyOf": [
+    {
+      "properties": {
+        "home_phone": {"type": "string"},
+        "cell_phone": {"type": "string"},
+        "work_phone": {"type": "string"}
+      },
+      "minProperties": 1
+    },
+    {
+      "properties": {
+        "birth_date": {"type": "string"},
+        "govt_id_number": {"type": "string"}
+      },
+      "minProperties": 1
+    }
+  ]
+}
