@@ -45,8 +45,8 @@ class JsonValidator:
 
 if __name__ == "__main__":
     
-    json_file_path = "C:\\Users\\tanma\\OneDrive\\Desktop\\data.json"
-    schema_file_path = "C:\\Users\\tanma\\OneDrive\\Desktop\\schema.json"
+    json_file_path = "https://github.com/tanmay2133/Python-Assignment/blob/main/data.json"
+    schema_file_path = "https://github.com/tanmay2133/Python-Assignment/blob/main/schema.json"
     
     validator = JsonValidator()
 
